@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def plot_loss_and_accuracy_curves(model_name, loss, acc, loss_v, acc_v):
     plt.figure()
-    epochs = np.arange(20)+1
+    epochs = np.arange(len(loss))+1
     plt.plot(epochs, loss, label='{} - training'.format(model_name))
     plt.plot(epochs, loss_v, label='{} - validation'.format(model_name))
     plt.xlabel("Epochs")
